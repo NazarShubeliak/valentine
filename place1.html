@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наш перший сюрприз 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .invite-text {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 15px 0 25px;
+}
+
+.invite-text span {
+  color: #ff4d6d;
+  font-weight: 600;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 180px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>💌 Запрошення</h1>
+
+  <p class="invite-text">
+    Я запрошую тебе в <span>La Luce</span>  
+    <br>14 лютого 💕  
+    <br>Готова до маленької пригоди?
+  </p>
+
+  <div class="gallery">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm8Ct491TFLtUpY0CG-G3vxI6poZO8mZJkJA&s" alt="Фото закладу 1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo538k5H67iA9qv2nHiwfDo9aq7fkPv3KI2g&s" alt="Фото закладу 3">
+    <img src="https://www.laluce.com.pl/img/o-nas/1.jpg" alt="Фото закладу 4">
+  </div>
+
+  <button onclick="nextStep()">Продовжити 💖</button>
+</div>
+
+<script>
+    function nextStep() {
+        window.location.href = "riddle2.html";
+    }
+
+</script>
+</body>
+</html>

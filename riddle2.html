@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Будеш моєю валентинкою?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+  <h2>🧩 Друга загадка</h2>
+  <p>Запитай сама знаєш кого 😉</p>
+
+  <input type="text" id="answer" placeholder="Введи відповідь" />
+  <button onclick="checkAnswer()">Перевірити</button>
+
+  <p id="error"></p>
+</div>
+
+  <script>
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.innerHTML = "❤️";
+        heart.style.position = "fixed";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "-20px";
+        heart.style.fontSize = Math.random() * 20 + 10 + "px";
+        heart.style.animation = "floatUp 4s linear";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 4000);
+    }, 500);
+    </script>
+
+    <style>
+    @keyframes floatUp {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+    }
+</style>
+
+<script>
+    function checkAnswer() {
+        const answer = document.getElementById("answer").value.toLowerCase().trim();
+        console.log(answer)
+        const correctAnswer = "поруч з тобою"; // ти знаєш її 😉
+        console.log(correctAnswer)
+
+        if (answer === correctAnswer) {
+            window.location.href = "place2.html";
+        } else {
+            document.getElementById("error").textContent = "Спробуй ще раз 💕";
+        }
+    }
+</script>
+
+</body>
+</html>

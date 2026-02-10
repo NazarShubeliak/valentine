@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Для тебе ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .final {
+  animation: fadeIn 2s ease;
+}
+
+.love-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+  margin: 20px 0;
+}
+
+.big-heart {
+  font-size: 70px;
+  margin: 20px 0;
+  animation: pulse 1.5s infinite;
+}
+
+.signature {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.signature span {
+  color: #ff4d6d;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container final">
+  <h1>❤️ Для тебе ❤️</h1>
+
+  <p class="love-text">
+    Якщо ти дійшла до цього моменту
+    значить ти вже знаєш відповідь 💫  
+    <br><br>
+    Я кохаю тебе сильніше, ніж можу описати словами.  
+    Ти мій спокій, мій сміх, мій дім.  
+    <br><br>
+    І я хочу провести з тобою  
+    не лише це 14 лютого…  
+    а всі наступні ❤️
+  </p>
+
+  <div class="big-heart">💖</div>
+
+  <p class="signature">
+    З любов’ю, <br>
+    <span>Назар</span>
+  </p>
+</div>
+
+<!-- сердечка -->
+<script>
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.style.position = "fixed";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.bottom = "-20px";
+    heart.style.fontSize = Math.random() * 18 + 12 + "px";
+    heart.style.animation = "floatUp 5s linear";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 5000);
+  }, 400);
+</script>
+
+<style>
+@keyframes floatUp {
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+</style>
+
+</body>
+</html>

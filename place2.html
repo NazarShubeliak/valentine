@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наш перший сюрприз 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .invite-text {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 15px 0 25px;
+}
+
+.invite-text span {
+  color: #ff4d6d;
+  font-weight: 600;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 180px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>💌 Запрошення</h1>
+
+  <p class="invite-text">
+    Я запрошую тебе в <span>Органний зал</span>  
+    <br>14 лютого 💕  
+    <br>Готова до маленької пригоди?
+  </p>
+
+  <div class="gallery">
+    <img src="https://d2q8nf5aywi2aj.cloudfront.net/uploads/resize/shows/logo/630x891_1767792826.webp" alt="Фото закладу 1">
+    <img src="https://lviv.travel/image/events/ed/0b/ed0beca23771526ca131bd21875536e050c67dbd_1681369204.jpg?crop=5372%2C2890%2C-6%2C691&w=1200&h=630" alt="Фото закладу 2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Mpf-Riv2jyW0YUSF1Hh9NN3N8KhC3W07tg&s" alt="Фото закладу 4">
+  </div>
+
+  <button onclick="nextStep()">Продовжити 💖</button>
+</div>
+
+<script>
+    function nextStep() {
+        window.location.href = "riddle3.html";
+    }
+
+</script>
+</body>
+</html>
