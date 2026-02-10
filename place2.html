@@ -6,27 +6,75 @@
   <title>Наш перший сюрприз 💖</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .invite-text {
-  font-size: 17px;
-  line-height: 1.6;
-  margin: 15px 0 25px;
+  /* =======================
+   БАЗОВІ СТИЛІ
+======================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.invite-text span {
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(circle at top, #ffdde1, #ee9ca7);
+  color: #333;
+  overflow-x: hidden;
+  padding: 20px 0;
+}
+
+/* =======================
+   КОНТЕЙНЕР
+======================= */
+.container {
+  width: 90%;
+  max-width: 420px;
+  margin: 0 auto 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 25px 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =======================
+   ТЕКСТ
+======================= */
+h1 {
+  font-size: 28px;
+  color: #ff4d6d;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+span {
   color: #ff4d6d;
   font-weight: 600;
 }
 
+/* =======================
+   ГАЛЕРЕЯ З ФОТО
+======================= */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  width: 100%;
   margin-bottom: 25px;
 }
 
 .gallery img {
   width: 100%;
-  height: 140px;
+  height: auto;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
@@ -37,17 +85,102 @@
   transform: scale(1.05);
 }
 
-@media (max-width: 400px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
+/* =======================
+   КНОПКИ
+======================= */
+button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
 
-  .gallery img {
-    height: 180px;
+button:hover {
+  background: #ff1a4d;
+  transform: scale(1.05);
+}
+
+/* =======================
+   ФІНАЛЬНІ СТОРІНКИ
+======================= */
+.final .love-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+  margin: 20px 0;
+}
+
+.final .big-heart {
+  font-size: 70px;
+  margin: 20px 0;
+  animation: pulse 1.5s infinite;
+}
+
+.final .signature {
+  margin-top: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.final .signature span {
+  color: #ff4d6d;
+  font-weight: 600;
+}
+
+/* =======================
+   Анімації
+======================= */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
   }
 }
 
-  </style>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =======================
+   МЕДІА-ДЛЯ МОБІЛЬНИХ
+======================= */
+@media (max-width: 400px) {
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .gallery img {
+    height: auto;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+    </style>
 </head>
 <body>
 
